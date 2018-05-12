@@ -165,12 +165,12 @@ public class ShortProperty : ObservableProperty<short>
 
     public static bool operator !=(ShortProperty o1, ShortProperty o2)
     {
-        return o1.Field != o2.Field;
+        return !o1.Equals(o2);
     }
 
     public static bool operator ==(ShortProperty o1, ShortProperty o2)
     {
-        return o1.Field == o2.Field;
+        return o1.Equals(o2);
     }
 
     public static bool operator !=(ShortProperty o1, short v)
@@ -343,7 +343,7 @@ public class ShortProperty : ObservableProperty<short>
 
     public override bool Equals(object obj)
     {
-        if (obj.GetType() == typeof(short))
+        if (obj != null && obj.GetType() == typeof(short))
         {
             return Field.Equals(obj);
         }

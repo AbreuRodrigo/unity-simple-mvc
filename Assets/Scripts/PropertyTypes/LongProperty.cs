@@ -165,12 +165,12 @@ public class LongProperty : ObservableProperty<long>
 
     public static bool operator !=(LongProperty o1, LongProperty o2)
     {
-        return o1.Field != o2.Field;
+        return !o1.Equals(o2);
     }
 
     public static bool operator ==(LongProperty o1, LongProperty o2)
     {
-        return o1.Field == o2.Field;
+        return o1.Equals(o2);
     }
 
     public static bool operator !=(LongProperty o1, int v)
@@ -343,7 +343,7 @@ public class LongProperty : ObservableProperty<long>
 
     public override bool Equals(object obj)
     {
-        if (obj.GetType() == typeof(long))
+        if (obj != null && obj.GetType() == typeof(long))
         {
             return Field.Equals(obj);
         }

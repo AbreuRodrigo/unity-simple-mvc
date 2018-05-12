@@ -34,7 +34,12 @@ public class ObservableProperty<T> : IObservableProperty<T>
         }
         set
         {
-            this.field = value;
+            field = value;
+
+            if (onValueChanged == null)
+            {
+                onValueChanged = delegate (T o) { };
+            }
 
             if (onValueChanged != null)
             {

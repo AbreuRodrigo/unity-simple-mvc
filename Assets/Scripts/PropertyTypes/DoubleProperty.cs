@@ -45,12 +45,12 @@ public class DoubleProperty : ObservableProperty<double>
 
     public static bool operator !=(DoubleProperty o1, DoubleProperty o2)
     {
-        return o1.Field != o2.Field;
+        return !o1.Equals(o2);
     }
 
     public static bool operator ==(DoubleProperty o1, DoubleProperty o2)
     {
-        return o1.Field == o2.Field;
+        return o1.Equals(o2);
     }
         
     public static DoubleProperty operator +(DoubleProperty obj1, double v)
@@ -343,7 +343,7 @@ public class DoubleProperty : ObservableProperty<double>
 
     public override bool Equals(object obj)
     {
-        if (obj.GetType() == typeof(int))
+        if (obj != null && obj.GetType() == typeof(int))
         {
             return Field.Equals(obj);
         }

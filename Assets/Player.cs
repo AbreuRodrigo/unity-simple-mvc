@@ -5,14 +5,21 @@ using UnityEngine;
 
 public class Player : MonoBehaviour, IModel
 {
+    [Header("Setup")]
+    public int initialLife;
+
+    [Header("Properties")]
     public StringProperty playerName;
-    public ByteProperty data;
-    public ShortProperty shortVal;
     public BoolProperty dead;
     public IntProperty life;
-    public FloatProperty range;
-    public DoubleProperty precision;
-    public LongProperty money;
+
+    private void Start()
+    {
+        if(life != null)
+        {
+            life.SetValue(initialLife);
+        }
+    }
 
     private void Update()
     {

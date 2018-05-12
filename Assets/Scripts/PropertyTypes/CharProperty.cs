@@ -165,12 +165,12 @@ public class CharProperty : ObservableProperty<char>
 
     public static bool operator !=(CharProperty o1, CharProperty o2)
     {
-        return o1.Field != o2.Field;
+        return !o1.Equals(o2);
     }
 
     public static bool operator ==(CharProperty o1, CharProperty o2)
     {
-        return o1.Field == o2.Field;
+        return o1.Equals(o2);
     }
 
     public static bool operator !=(CharProperty o1, int v)
@@ -290,7 +290,7 @@ public class CharProperty : ObservableProperty<char>
 
     public override bool Equals(object obj)
     {
-        if (obj.GetType() == typeof(int))
+        if (obj != null && obj.GetType() == typeof(int))
         {
             return Field.Equals(obj);
         }

@@ -22,24 +22,24 @@ public class BoolProperty : ObservableProperty<bool>
         return t.Field;
     }
 
-    public static bool operator !=(BoolProperty obj1, BoolProperty obj2)
+    public static bool operator !=(BoolProperty o1, BoolProperty o2)
     {
-        return obj1.Field != obj2.Field;
+        return !o1.Equals(o2);
     }
 
-    public static bool operator ==(BoolProperty obj1, BoolProperty obj2)
+    public static bool operator ==(BoolProperty o1, BoolProperty o2)
     {
-        return obj1.Field == obj2.Field;
+        return o1.Equals(o2);
     }
 
-    public static bool operator !=(BoolProperty obj1, bool v)
+    public static bool operator !=(BoolProperty o1, bool v)
     {
-        return obj1.Field != v;
+        return o1.Field != v;
     }
 
-    public static bool operator ==(BoolProperty obj1, bool v)
+    public static bool operator ==(BoolProperty o1, bool v)
     {
-        return obj1.Field == v;
+        return o1.Field == v;
     }
 
     public override string ToString()
@@ -49,7 +49,7 @@ public class BoolProperty : ObservableProperty<bool>
 
     public override bool Equals(object obj)
     {
-        if (obj.GetType() == typeof(bool))
+        if (obj != null && obj.GetType() == typeof(bool))
         {
             return Field.Equals(obj);
         }

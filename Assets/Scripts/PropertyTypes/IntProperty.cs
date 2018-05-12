@@ -166,12 +166,12 @@ public class IntProperty : ObservableProperty<int>
     
     public static bool operator !=(IntProperty o1, IntProperty o2)
     {
-        return o1.Field != o2.Field;
+        return !o1.Equals(o2);
     }
 
     public static bool operator ==(IntProperty o1, IntProperty o2)
     {
-        return o1.Field == o2.Field;
+        return o1.Equals(o2);
     }
 
     public static bool operator !=(IntProperty o1, int v)
@@ -344,7 +344,7 @@ public class IntProperty : ObservableProperty<int>
 
     public override bool Equals(object obj)
     {
-        if(obj.GetType() == typeof(int))
+        if (obj != null && obj != null && obj.GetType() == typeof(int))
         {
             return Field.Equals(obj);
         }

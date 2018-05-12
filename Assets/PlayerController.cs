@@ -10,9 +10,9 @@ public class PlayerController : MonoBehaviour
     [Header("View")]
     public PlayerView playerView;
 
-	void Start ()
+	void Awake ()
     {
-		if(player != null)
+		if(player)
         {
             player.life.AddObserver(OnPlayerLifeChanges);
             player.dead.AddObserver(OnPlayerDied);

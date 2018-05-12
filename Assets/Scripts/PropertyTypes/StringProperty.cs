@@ -19,6 +19,16 @@ public class StringProperty : ObservableProperty<string>
         return obj1;
     }
 
+    public static bool operator ==(StringProperty o1, StringProperty o2)
+    {
+        return o1.Equals(o2);
+    }
+
+    public static bool operator !=(StringProperty o1, StringProperty o2)
+    {
+        return !o1.Equals(o2);
+    }
+
     public override string ToString()
     {
         return Field.ToString();
@@ -26,7 +36,7 @@ public class StringProperty : ObservableProperty<string>
 
     public override bool Equals(object obj)
     {
-        if (obj.GetType() == typeof(string))
+        if (obj != null && obj.GetType() == typeof(string))
         {
             return Field.Equals(obj);
         }

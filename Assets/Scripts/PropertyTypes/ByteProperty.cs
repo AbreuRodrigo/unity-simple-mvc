@@ -69,12 +69,12 @@ public class ByteProperty : ObservableProperty<byte>
 
     public static bool operator !=(ByteProperty o1, ByteProperty o2)
     {
-        return o1.Field != o2.Field;
+        return !o1.Equals(o2);
     }
 
     public static bool operator ==(ByteProperty o1, ByteProperty o2)
     {
-        return o1.Field == o2.Field;
+        return o1.Equals(o2);
     }
 
     public static bool operator !=(ByteProperty o1, byte v)
@@ -94,7 +94,7 @@ public class ByteProperty : ObservableProperty<byte>
 
     public override bool Equals(object obj)
     {
-        if (obj.GetType() == typeof(int))
+        if (obj != null && obj.GetType() == typeof(int))
         {
             return Field.Equals(obj);
         }

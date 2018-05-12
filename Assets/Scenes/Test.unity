@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9b22292e6fddae4ca5909334a61f308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialLife: 100
   playerName:
     field: MyPlayerName
   data:
