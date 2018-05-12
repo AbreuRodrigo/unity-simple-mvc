@@ -140,8 +140,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9b22292e6fddae4ca5909334a61f308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Life:
-    field: 200
+  playerName:
+    field: MyPlayerName
+  data:
+    field: 255
+  shortVal:
+    field: 32767
+  dead:
+    field: 1
+  life:
+    field: 2147483647
+  range:
+    field: 99.99
+  precision:
+    field: 120.567
+  money:
+    field: 189000000000
 --- !u!4 &93560058
 Transform:
   m_ObjectHideFlags: 0

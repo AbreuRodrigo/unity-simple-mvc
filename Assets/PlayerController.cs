@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     {
 		if(player != null)
         {
-            player.Life.AddObserver(OnPlayerLifeChanges);
+            player.life.AddObserver(OnPlayerLifeChanges);
         }
 	}
 
