@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [Header("Model")]
-    public Player player;
+    public PlayerModel player;
 
     [Header("View")]
     public PlayerView playerView;

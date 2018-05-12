@@ -142,21 +142,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialLife: 100
   playerName:
-    field: MyPlayerName
-  data:
-    field: 255
-  shortVal:
-    field: 32767
+    field: Player1
   dead:
     field: 0
   life:
     field: 100
-  range:
-    field: 99.99
-  precision:
-    field: 120.567
-  money:
-    field: 189000000000
 --- !u!4 &93560058
 Transform:
   m_ObjectHideFlags: 0
