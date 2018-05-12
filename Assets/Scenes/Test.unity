@@ -147,7 +147,7 @@ MonoBehaviour:
   shortVal:
     field: 32767
   dead:
-    field: 1
+    field: 0
   life:
     field: 2147483647
   range:

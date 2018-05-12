@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class ObservableProperty<T>
+public class ObservableProperty<T> : IObservableProperty<T>
 {
     [SerializeField]
     private T field;
