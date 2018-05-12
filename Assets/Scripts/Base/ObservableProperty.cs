@@ -42,4 +42,14 @@ public class ObservableProperty<T> : IObservableProperty<T>
             }
         }
     }
+
+    public T GetValue()
+    {
+        return Field;
+    }
+
+    public void SetValue(T t)
+    {
+        Field = t;
+    }
 }

@@ -283,6 +283,59 @@ public class ShortProperty : ObservableProperty<short>
         return o1.Field < v;
     }
 
+    #region >= <=
+    public static bool operator <=(ShortProperty o1, int v)
+    {
+        return o1.Field <= v;
+    }
+
+    public static bool operator >=(ShortProperty o1, int v)
+    {
+        return o1.Field >= v;
+    }
+
+    public static bool operator <=(ShortProperty o1, float v)
+    {
+        return o1.Field <= v;
+    }
+
+    public static bool operator >=(ShortProperty o1, float v)
+    {
+        return o1.Field >= v;
+    }
+
+    public static bool operator <=(ShortProperty o1, double v)
+    {
+        return o1.Field <= v;
+    }
+
+    public static bool operator >=(ShortProperty o1, double v)
+    {
+        return o1.Field >= v;
+    }
+
+    public static bool operator >=(ShortProperty o1, short v)
+    {
+        return o1.Field >= v;
+    }
+
+    public static bool operator <=(ShortProperty o1, short v)
+    {
+        return o1.Field <= v;
+    }
+
+    public static bool operator >=(ShortProperty o1, long v)
+    {
+        return o1.Field >= v;
+    }
+
+    public static bool operator <=(ShortProperty o1, long v)
+    {
+        return o1.Field <= v;
+    }
+
+    #endregion >= <=
+
     public override string ToString()
     {
         return Field.ToString();

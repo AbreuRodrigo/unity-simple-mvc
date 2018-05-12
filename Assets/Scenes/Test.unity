@@ -149,7 +149,7 @@ MonoBehaviour:
   dead:
     field: 0
   life:
-    field: 2147483647
+    field: 100
   range:
     field: 99.99
   precision:

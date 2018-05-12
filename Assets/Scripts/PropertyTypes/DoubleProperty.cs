@@ -222,6 +222,59 @@ public class DoubleProperty : ObservableProperty<double>
     {
         return o1.Field == v;
     }
+    
+    #region >= <=
+    public static bool operator <=(DoubleProperty o1, int v)
+    {
+        return o1.Field <= v;
+    }
+
+    public static bool operator >=(DoubleProperty o1, int v)
+    {
+        return o1.Field >= v;
+    }
+
+    public static bool operator <=(DoubleProperty o1, float v)
+    {
+        return o1.Field <= v;
+    }
+
+    public static bool operator >=(DoubleProperty o1, float v)
+    {
+        return o1.Field >= v;
+    }
+
+    public static bool operator <=(DoubleProperty o1, double v)
+    {
+        return o1.Field <= v;
+    }
+
+    public static bool operator >=(DoubleProperty o1, double v)
+    {
+        return o1.Field >= v;
+    }
+
+    public static bool operator >=(DoubleProperty o1, short v)
+    {
+        return o1.Field >= v;
+    }
+
+    public static bool operator <=(DoubleProperty o1, short v)
+    {
+        return o1.Field <= v;
+    }
+
+    public static bool operator >=(DoubleProperty o1, long v)
+    {
+        return o1.Field >= v;
+    }
+
+    public static bool operator <=(DoubleProperty o1, long v)
+    {
+        return o1.Field <= v;
+    }
+
+    #endregion >= <=
 
     public static bool operator >(DoubleProperty o1, DoubleProperty o2)
     {

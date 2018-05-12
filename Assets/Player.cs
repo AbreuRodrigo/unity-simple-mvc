@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IModel
 {
     public StringProperty playerName;
     public ByteProperty data;
@@ -16,9 +16,14 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.A))
+        if(Input.GetKeyDown(KeyCode.A) && !dead)
         {
             life -= 10;
+
+            if(life <= 0)
+            {
+                dead.SetValue(true);
+            }
         }
     }
 }

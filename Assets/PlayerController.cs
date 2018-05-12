@@ -15,14 +15,20 @@ public class PlayerController : MonoBehaviour
 		if(player != null)
         {
             player.life.AddObserver(OnPlayerLifeChanges);
+            player.dead.AddObserver(OnPlayerDied);
         }
 	}
 
     private void OnPlayerLifeChanges(int life)
     {
-        if (playerView != null && playerView.life != null)
+        playerView.UpdateLife(life);
+    }
+
+    private void OnPlayerDied(bool dead)
+    {
+        if (dead)
         {
-            playerView.life.text = "Life: " + life.ToString();
+            Debug.Log("Player died");
         }
     }
 }

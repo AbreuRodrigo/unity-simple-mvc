@@ -282,6 +282,58 @@ public class FloatProperty : ObservableProperty<float>
     {
         return o1.Field < v;
     }
+    
+    #region >= <=
+    public static bool operator <=(FloatProperty o1, int v)
+    {
+        return o1.Field <= v;
+    }
+
+    public static bool operator >=(FloatProperty o1, int v)
+    {
+        return o1.Field >= v;
+    }
+
+    public static bool operator <=(FloatProperty o1, float v)
+    {
+        return o1.Field <= v;
+    }
+
+    public static bool operator >=(FloatProperty o1, float v)
+    {
+        return o1.Field >= v;
+    }
+
+    public static bool operator <=(FloatProperty o1, double v)
+    {
+        return o1.Field <= v;
+    }
+
+    public static bool operator >=(FloatProperty o1, double v)
+    {
+        return o1.Field >= v;
+    }
+
+    public static bool operator >=(FloatProperty o1, short v)
+    {
+        return o1.Field >= v;
+    }
+
+    public static bool operator <=(FloatProperty o1, short v)
+    {
+        return o1.Field <= v;
+    }
+
+    public static bool operator >=(FloatProperty o1, long v)
+    {
+        return o1.Field >= v;
+    }
+
+    public static bool operator <=(FloatProperty o1, long v)
+    {
+        return o1.Field <= v;
+    }
+    #endregion >= <=
 
     public override string ToString()
     {

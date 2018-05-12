@@ -224,6 +224,59 @@ public class IntProperty : ObservableProperty<int>
         return o1.Field == v;
     }
 
+    #region >= <=
+    public static bool operator <=(IntProperty o1, int v)
+    {
+        return o1.Field <= v;
+    }
+
+    public static bool operator >=(IntProperty o1, int v)
+    {
+        return o1.Field >= v;
+    }
+
+    public static bool operator <=(IntProperty o1, float v)
+    {
+        return o1.Field <= v;
+    }
+
+    public static bool operator >=(IntProperty o1, float v)
+    {
+        return o1.Field >= v;
+    }
+
+    public static bool operator <=(IntProperty o1, double v)
+    {
+        return o1.Field <= v;
+    }
+    
+    public static bool operator >=(IntProperty o1, double v)
+    {
+        return o1.Field >= v;
+    }
+
+    public static bool operator >=(IntProperty o1, short v)
+    {
+        return o1.Field >= v;
+    }
+
+    public static bool operator <=(IntProperty o1, short v)
+    {
+        return o1.Field <= v;
+    }
+
+    public static bool operator >=(IntProperty o1, long v)
+    {
+        return o1.Field >= v;
+    }
+
+    public static bool operator <=(IntProperty o1, long v)
+    {
+        return o1.Field <= v;
+    }
+
+    #endregion >= <=
+
     public static bool operator >(IntProperty o1, IntProperty o2)
     {
         return o1.Field > o2.Field;

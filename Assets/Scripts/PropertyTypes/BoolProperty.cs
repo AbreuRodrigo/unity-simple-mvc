@@ -7,6 +7,21 @@ public class BoolProperty : ObservableProperty<bool>
 
     //OPERATORS
 
+    public static bool operator !(BoolProperty o1)
+    {
+        return !o1.Field;
+    }
+
+    public static bool operator true(BoolProperty t)
+    {
+        return t.Field;
+    }
+
+    public static bool operator false(BoolProperty t)
+    {
+        return t.Field;
+    }
+
     public static bool operator !=(BoolProperty obj1, BoolProperty obj2)
     {
         return obj1.Field != obj2.Field;

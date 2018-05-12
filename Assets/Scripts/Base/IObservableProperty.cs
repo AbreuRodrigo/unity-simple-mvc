@@ -7,4 +7,7 @@ public interface IObservableProperty<T>
 {
     void AddObserver(Action<T> observer);
     T Field { get; set; }
+
+    T GetValue();
+    void SetValue(T t);
 }
